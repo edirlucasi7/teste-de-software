@@ -1,7 +1,7 @@
 package tdd;
 
 public class Deposito {
-
+	
 	String data = "Undefined";
 	int valor = -1;
 	
@@ -18,4 +18,9 @@ public class Deposito {
 		return data;
 	}
 
+	@Override
+	public String toString() {
+		return data + "\tDeposito\t$" + valor;
+	}
+	
 }
