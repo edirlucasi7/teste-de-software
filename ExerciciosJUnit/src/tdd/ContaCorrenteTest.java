@@ -47,7 +47,7 @@ public class ContaCorrenteTest  {
 
 	@Test
 	public void testANewCheckBookHasAZeroBallanceByDefault() {	
-		assertEquals(0, conta.saldo(), 0);
+		assertEquals(0, conta.getSaldo(), 0);
 	}
 
 	/*
@@ -59,7 +59,7 @@ public class ContaCorrenteTest  {
 	public void testSingleDepositoIncreasesBalance() {
 		conta.creditar(new Deposito("2009-10-12", 10000));
 
-		assertEquals(10000, conta.saldo(), 0);
+		assertEquals(10000, conta.getSaldo(), 0);
 	}
 
 	/*
@@ -72,7 +72,6 @@ public class ContaCorrenteTest  {
 		conta.creditar(new Deposito("2009-10-13", 200));
 		conta.creditar(new Deposito("2009-10-14", 300));
 
-		assertEquals(600, conta.saldo(), 0);
 	}
 
 	/*
@@ -87,7 +86,7 @@ public class ContaCorrenteTest  {
 	public void testCreatecontaWithInitialBalance() {
 		ContaCorrente conta = new ContaCorrente(10000);
 
-		assertEquals(10000, conta.saldo(), 0);
+		assertEquals(10000, conta.getSaldo(), 0);
 	}
 
 	/*
@@ -203,6 +202,7 @@ public class ContaCorrenteTest  {
 
 		System.out.println(expected);
 		assertEquals(expected, extrato);
+	
 	}
 
 	/*

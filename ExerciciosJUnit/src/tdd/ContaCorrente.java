@@ -10,8 +10,7 @@ public class ContaCorrente {
 	private int saldo;
 	private List<Deposito> depositos = new ArrayList<Deposito>();
 	
-	public ContaCorrente() {
-	}
+	public ContaCorrente() { }
 	
 	public ContaCorrente(int saldo) {
 		this.saldo = saldo;
@@ -26,16 +25,12 @@ public class ContaCorrente {
 		this.saldo = saldo;
 	}
 	
-	public double saldo() {
-		return getSaldo();
-	}
-	
 	public void creditar(Deposito deposito) {
 		this.saldoInicial = getSaldo();
 		this.saldo += deposito.valor();
 		this.depositos.add(deposito);
 	}
-	
+
 	public void limpa() {
 		this.nome = "";
 		this.saldo = 0;
@@ -50,12 +45,7 @@ public class ContaCorrente {
 	}
 	
 	public String retornaListaDeDepositos() {
-		boolean flag = false;
-		for (Deposito deposito : depositos) {
-			flag = true;
-			break;
-		}
-		if(flag == false) {
+		if(this.depositos.size() == 0) {
 			return "Nenhuma trasacao realizada";
 		}
 		return getDepositos().toString().replace(", ", "\n");

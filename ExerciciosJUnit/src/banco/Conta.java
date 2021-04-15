@@ -17,7 +17,7 @@ public class Conta {
 
 	public double debitar(double valor) throws OperacaoIlegalException {
 		
-		if ( valor > 0 ) {
+		if( valor > 0 ) {
 	         saldo = saldo-valor; 
 	    }
 		else {
@@ -29,7 +29,7 @@ public class Conta {
 
 	public double creditar(Conta destino, double valor) throws OperacaoIlegalException {
 		
-		if ( valor > 0 ) {
+		if( valor > 0 ) {
 	         destino.saldo = saldo+valor; 
 	    }
 		else {
@@ -44,7 +44,7 @@ public class Conta {
 
 	 public void transferir(Conta destino, double valor) throws OperacaoIlegalException {
 		 
-		 if (valor < 0 || valor > saldo ) {
+		 if(valor < 0 || valor > saldo ) {
 			 throw new OperacaoIlegalException();
 		 } else {
 			 this.debitar(valor);

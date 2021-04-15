@@ -10,6 +10,6 @@ public class ContaTest {
 	public void testDebitarSucesso() throws OperacaoIlegalException{
 		Conta c = new Conta("123", 20);
 		c.debitar(10);
-		assertEquals(10,c.getSaldo(),0.0);
+		assertEquals(10, c.getSaldo(), 0.0);
 	} 
 }

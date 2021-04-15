@@ -2,9 +2,6 @@ package param;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.Arrays;
-import java.util.Collection;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -29,13 +26,6 @@ public class AdditionTest {
 		return new Integer[][] { { 3, 1, 2 }, { 5, 2, 3 },
 			{ 7, 3, 4 }, { 9, 4, 5 }, };
 	}
-
-	//    @Parameters
-	//    public static Collection<Integer[]> addedNumbers() {
-	//        return Arrays.asList(new Integer[][] { { 3, 1, 2 }, { 5, 2, 3 },
-	//                { 7, 3, 4 }, { 9, 4, 5 }, });
-	//    }
-
 
 	@Test
 	public void sum() {

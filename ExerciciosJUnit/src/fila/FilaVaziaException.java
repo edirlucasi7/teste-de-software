@@ -12,4 +12,5 @@ public class FilaVaziaException extends RuntimeException {
 	public FilaVaziaException(String mensagem, Throwable causa){
 		super(mensagem, causa);
 	}
+	
 }

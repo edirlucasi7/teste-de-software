@@ -29,8 +29,8 @@ public class CalculoImpostoTest {
 	@Test
 	public void calculaImposto() {
 		CalculoImpostoRenda calcula = new CalculoImpostoRenda();
-		double delta = 0.0000000001;
-		System.out.println("A porcentagem do imposto é: " + calcula.calculaPorcentagemImposto(valor));
+		double delta = 0.01;
+		System.out.println("A porcentagem do imposto é: " + calcula.retornaPorcentagemImposto(valor));
 		assertEquals(impostoTotal, calcula.calculaImposto(valor), delta);
 	}
 
